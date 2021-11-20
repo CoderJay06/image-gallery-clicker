@@ -1,5 +1,4 @@
-// grab image element and container from the dom
-const imgContainer = document.getElementById("img-container");
+// grab image element from the dom
 const img = document.querySelector(".img");
 
 // set an array or hash of random images from the web
@@ -48,8 +47,8 @@ function loadImage() {
 img.addEventListener("click", loadImage);
 
 // add evenet listsenr to handle space bar clicks
-imgContainer.addEventListener("keydown", (e) => {
-  if (e.key === "space") {
+document.addEventListener("keydown", (e) => {
+  if (e.keyCode === 32) {
     loadImage();
   }
 });
